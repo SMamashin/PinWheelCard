@@ -1,0 +1,14 @@
+[
+  {"href": "#", "src": "https://smamashin.ru/e/pinwheelcard/img/py.png", "category": "mainSkills", "styleClass": "python"},
+  {"href": "#", "src": "https://smamashin.ru/e/pinwheelcard/img/js.png", "category": "mainSkills", "styleClass": "javascript"},
+  {"href": "#", "src": "https://smamashin.ru/e/pinwheelcard/img/ts.png", "category": "mainSkills", "styleClass": "typescript"},
+  {"href": "#", "src": "https://smamashin.ru/e/pinwheelcard/img/sass.png", "category": "mainSkills", "styleClass": "scss"},
+  {"href": "#", "src": "https://smamashin.ru/e/pinwheelcard/img/react.svg", "category": "mainSkills", "styleClass": "react"},
+  {"href": "#", "src": "https://smamashin.ru/e/pinwheelcard/img/svelte.png", "category": "mainSkills", "styleClass": "svelte"},
+  {"href": "#", "src": "https://smamashin.ru/e/pinwheelcard/img/vsc.png", "category": "tools", "styleClass": "vsc"},
+  {"href": "#", "src": "https://smamashin.ru/e/pinwheelcard/img/ws.png", "category": "tools", "styleClass": "webstorm"},
+  {"href": "#", "src": "https://smamashin.ru/e/pinwheelcard/img/pycharm.png", "category": "tools", "styleClass": "pycharm"},
+  {"href": "#", "src": "https://smamashin.ru/e/pinwheelcard/img/google.png", "category": "tools", "styleClass": "google"},
+  {"href": "#", "src": "https://smamashin.ru/e/pinwheelcard/img/photoshop.svg", "category": "tools", "styleClass": "photoshop"},
+  {"href": "#", "src": "https://smamashin.ru/e/pinwheelcard/img/git.png", "category": "tools", "styleClass": "git"}
+]

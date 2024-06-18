@@ -1,0 +1,344 @@
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 400px;
+  height: 500px;
+  perspective: 1000px;
+  opacity: 1;
+  transition: opacity .6s ease-in-out;
+
+  //&:hover {
+  //  opacity: 1;
+  //}
+
+}
+
+.cardInner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.cardReverse {
+  transform: rotateY(-180deg);
+}
+
+.cardFront, .cardBack {
+  position: absolute;
+  /* width: 100%; */
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  inset: 0;
+  z-index: 2;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+.cardFront {
+  background: #141414;
+  border-radius: 25px;
+  color: #fff;
+  text-shadow: 0 0 10px #fff;
+}
+
+.cardBack {
+  /* background: #d1d1d1; */
+  background: #545454;
+  color: rgb(220, 220, 220);
+  transform: rotateY(-180deg);
+  border-radius: 25px;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.5;
+  font-style: normal;
+  font-weight: bold;
+  padding: 3px;
+}
+
+.avatar img {
+  width: 180px;
+  height: auto;
+  border: 5px solid #abc5da;
+  border-radius: 100px;
+  filter: drop-shadow(0 0 0.75rem #abc5da);
+}
+
+.superText {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0, #ff8c00, #ff0080);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-animation 5s infinite linear;
+  text-shadow: none;
+
+  @keyframes gradient-animation {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  vertical-align: middle;
+  padding: 10px;
+  box-sizing: border-box;
+
+  img {
+    width: 40px;
+    height: auto;
+    padding: 5px;
+  }
+
+  a {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  a:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 7.5px;
+    left: 7.5px;
+    right: 7.5px;
+    bottom: 7.5px;
+    border-radius: 100px;
+    background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0, #ff8c00, #ff0080, #8A2BE2, #FF1493, #1E90FF, #32CD32, #FFFF00, #FF4500, #FF69B4);
+    filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  a:hover::before {
+    opacity: 1;
+  }
+}
+
+.LightText {
+  text-shadow: 0 0 15px #fff;
+
+  .Py {
+    text-shadow: none;
+    box-shadow: 0 0 15px #366d9a;
+  }
+
+  .Js {
+    text-shadow: none;
+    box-shadow: 0 0 15px #f4e11e;;
+  }
+
+  .Ts {
+    text-shadow: none;
+    box-shadow: 0 0 15px #007acc;
+  }
+}
+
+.Lang {
+  border: none;
+  border-radius: 15px;
+  background-color: transparent;
+  color: transparent;
+  padding: 1px 5px 1px 5px;
+}
+
+.Py {
+  background-color: #366d9a;
+  color: #ffce42;
+}
+
+.Js {
+  background-color: #f4e11e;
+  color: #050708;
+}
+
+.Ts {
+  background-color: #007acc;
+  color: #ffffff;
+}
+
+.Skills {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  vertical-align: middle;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+
+  img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    padding: 10px;
+  }
+
+  .react {
+    animation: react 10s infinite linear;
+    filter: drop-shadow(0 0 0.75rem #00bbd3);
+  }
+  .svelte {
+    filter: drop-shadow(0 0 0.55rem #ff8059);
+  }
+  .typescript {
+    filter: drop-shadow(0 0 0.55rem #007acc);
+    border-radius: 40px;
+  }
+  .javascript {
+    filter: drop-shadow(0 0 0.55rem #f4e11e);
+    border-radius: 40px;
+  }
+  .python {
+    filter: drop-shadow(0 0 0.55rem #366b98);
+  }
+  .scss {
+    filter: drop-shadow(0 0 0.55rem #fd007a);
+    border-radius: 40px;
+  }
+  .vsc {
+    filter: drop-shadow(0 0 0.55rem #0179cb);
+  }
+  .webstorm {
+    filter: drop-shadow(0 0 0.55rem #09b7d7);
+  }
+  .pycharm {
+    filter: drop-shadow(0 0 0.55rem #1ad78c)
+  }
+  .google {
+    filter: drop-shadow(0 0 0.55rem #ffffff);
+  }
+  .git {
+    filter: drop-shadow(0 0 0.55rem #ffffff);
+  }
+  .photoshop {
+    filter: drop-shadow(0 0 0.55rem #001e36);
+  }
+  @keyframes react {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(720deg);
+    }
+  }
+}
+
+.BackButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+button {
+  margin: 10px auto;
+  padding: 5px;
+  border: none;
+  outline: none;
+  background-color: #188ae7;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+span a {
+  text-decoration: underline #007acc;
+  text-align: center;
+  color: #188ae7;
+}
+
+.backgroundVideo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  z-index: -1;
+  transform: translate(-50%, -50%) scale(1.1);
+  filter: blur(15px) brightness(70%);
+
+  video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+.v {
+  text-shadow: none;
+  color: #373737;
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 300px;
+    height: 400px;
+    margin: 20px 20px 20px 20px;
+  }
+  .avatar img {
+    width: 100px;
+  }
+  .cardBack {
+    font-size: 14px;
+    padding: 6px;
+    height: 500px;
+  }
+  .links {
+    img {
+      width: 30px;
+    }
+  }
+}

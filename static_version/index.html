@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PinWheel Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video class="background-video" autoplay loop muted playsinline>
+    </video>
+    <div class="card" id="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <div class="avatar">
+                    <img src="https://0.gravatar.com/avatar/b700a93656ece5fb9b0f3e8384ab39f239a43d7b76361a00f0fa515b4d8a18cf?size=256"/>
+                </div>
+                <h1 class="nickname">SMamashin</h1>
+                <p class="super-text">Static: ON</p>
+                <!-- <span>My links:</span> -->
+                <div class="links" id="links">
+                    <a href="#"><img src="./img/bh.png"/></a>
+                    <a href="#"><img src="./img/git.png"/></a>
+                    <a href="#"><img src="./img/tg.svg"/></a>
+                    <a href="#"><img src="./img/vk.png"/></a>
+                    <a href="#"><img src="./img/steam.svg"/></a>
+                </div>
+                <button id="reverse">
+                    reverse card
+                </button>
+            </div>
+            <div class="card-back">
+                <p class="light-text">Hello to you! 👋</p>
+                <p class="light-text">
+                    Welcome to my site! <br/>
+                    My name is Stepan 45 y.o <br/> I develop in <strong class="lang py">Python</strong>
+                    and <strong class="lang js">JavaScript</strong> & 
+                    <strong class="lang ts">Typescript</strong>. <br/>
+                    I have some experience with React and Svelte.
+                    I also accept static development very well by the way this business card
+                    is written in static =)
+                </p>
+                <span class="light-text">My main skills:</span>
+                <div class="skills">
+                    <a href="#"><img class="python" src="./img/py.png"/></a>
+                    <a href="#"><img class="javascript" src="./img/js.png"/></a>
+                    <a href="#"><img class="typescript" src="./img/ts.png"/></a>
+                    <a href="#"><img class="scss" src="./img/sass.png"/></a>
+                    <a href="#"><img class="react" src="./img/react.svg"/></a>
+                    <a href="#"><img class="svelte" src="./img/svelte.png"/></a>
+                </div>
+                <span class="light-text">My skills to use:</span>
+                <div class="skills">
+                    <a href="#"><img class="vsc" src="./img/vsc.png"/></a>
+                    <a href="#"><img class="wshtorm" src="./img/ws.png"/></a>
+                    <a href="#"><img class="pycharm" src="./img/pycharm.png"></a>
+                    <a href="#"><img class="google" src="./img/google.png"/></a>
+                    <a href="#"><img class="photoshop" src="./img/photoshop.svg"/></a>
+                    <a href="#"><img class="git" src="./img/git.png"/></a>
+                </div>
+                <span class="light-text">You can see my projects <a>here</a></span>
+                <div class="back-buttons">
+                    <button id="reverse2">
+                        reverse card
+                    </button>
+                    <button id="light" class="lightBtn">
+                        light on
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
